@@ -40,6 +40,11 @@ public class UserController {
         return user.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
         }
+
+    @GetMapping("/all")
+    public String getAllUsers() {
+        return userService.getAllUsers();
     }
+}
 
 
